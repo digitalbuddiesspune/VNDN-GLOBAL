@@ -1,19 +1,25 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "VNDN Global API server",
   "license": "ISC",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
+  "type": "commonjs",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "seed:admin": "node src/scripts/seedAdmin.js",
+    "seed:users": "node src/scripts/seedUsers.js"
   },
   "dependencies": {
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
