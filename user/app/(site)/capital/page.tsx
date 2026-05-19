@@ -1,16 +1,12 @@
-import { BrandPageLayout } from "@/components/brand/BrandPageLayout";
+import { BrandSitePage } from "@/components/brand/BrandSitePage";
 import { createBrandMetadata } from "@/lib/brand/metadata";
-import { getBrandBySlug } from "@/lib/brand/ecosystem";
 
 export const metadata = createBrandMetadata("capital");
 
 export default function CapitalPage() {
-  const brand = getBrandBySlug("capital");
-  if (!brand) return null;
-
   return (
-    <BrandPageLayout
-      brand={brand}
+    <BrandSitePage
+      slug="capital"
       relatedSlugs={["vane-victor", "ateliers", "corporate"]}
     />
   );

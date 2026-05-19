@@ -1,16 +1,41 @@
-/* Homepage — matches index.html design */
+/* Homepage — luxury real estate */
 
 .home-page {
-  --gold: #c9a84c;
-  --gold-light: #e8d49a;
-  --cream: #f8f5ef;
-  --dark: #0f0f0e;
-  --charcoal: #1c1c1a;
-  --muted: #8a8a80;
-  --border: rgba(201, 168, 76, 0.2);
-  background: var(--dark);
-  color: var(--cream);
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+  --home-gold: #c9a84c;
+  --home-gold-light: #e8d49a;
+  --home-cream: #f8f5ef;
+  --home-dark: #0f0f0e;
+  --home-charcoal: #1a1a18;
+  --home-surface: #222220;
+  --home-muted: #a8a89e;
+  --home-border: rgba(201, 168, 76, 0.22);
+  --home-section-y: clamp(4rem, 10vw, 6.5rem);
+  --home-section-x: clamp(1.25rem, 5vw, 3.75rem);
+
+  background: var(--home-dark);
+  color: var(--home-cream);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  cursor: default;
+}
+
+/* Ensure normal cursor everywhere on the homepage (overrides legacy cursor-none) */
+.home-page,
+.home-page *:not(input):not(textarea):not(select) {
+  cursor: default;
+}
+
+.home-page a,
+.home-page button,
+.home-page [type="button"],
+.home-page [type="submit"],
+.home-page label[for],
+.home-page summary {
+  cursor: pointer;
+}
+
+.home-page input:not([type="checkbox"]):not([type="radio"]),
+.home-page textarea {
+  cursor: text;
 }
 
 .home-page h1,
@@ -22,7 +47,7 @@
   background: none;
   -webkit-background-clip: unset;
   background-clip: unset;
-  color: var(--cream);
+  color: inherit;
   animation: none;
 }
 
@@ -30,24 +55,122 @@
   font-family: var(--font-cormorant), Georgia, serif;
 }
 
+.home-section {
+  padding: var(--home-section-y) var(--home-section-x);
+}
+
+.home-section--charcoal {
+  background: var(--home-charcoal);
+}
+
+.home-section--dark {
+  background: var(--home-dark);
+}
+
+.home-eyebrow {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--home-gold);
+}
+
+.home-section-title {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--home-cream);
+}
+
+.home-section-title em {
+  font-style: normal;
+  color: var(--home-gold);
+}
+
+.home-link-action {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--home-gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--home-gold);
+  padding-bottom: 0.25rem;
+  transition: opacity 0.2s ease;
+}
+
+.home-link-action:hover {
+  opacity: 0.75;
+}
+
+.home-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--home-dark);
+  background: var(--home-gold);
+  border: none;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.home-btn-primary:hover {
+  background: var(--home-gold-light);
+}
+
+.home-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--home-cream);
+  background: transparent;
+  border: 1px solid var(--home-border);
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.home-btn-ghost:hover {
+  border-color: var(--home-gold);
+  color: var(--home-gold);
+}
+
+.home-card {
+  border: 1px solid var(--home-border);
+  background: var(--home-surface);
+  border-radius: 0.5rem;
+}
+
+.home-page a:focus-visible,
+.home-page button:focus-visible,
+.home-page input:focus-visible,
+.home-page select:focus-visible {
+  outline: 2px solid var(--home-gold);
+  outline-offset: 2px;
+}
+
 @keyframes home-hero-fade-in {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes home-bounce {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(8px);
   }
 }
 
@@ -62,10 +185,10 @@
 
 .home-animate-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(16px);
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    opacity 0.55s ease,
+    transform 0.55s ease;
 }
 
 .home-animate-in.is-visible {
@@ -73,13 +196,13 @@
   transform: translateY(0);
 }
 
-@media (max-width: 1024px) {
-  .home-page {
-    cursor: auto;
-  }
-
-  #home-cursor,
-  #home-cursor-ring {
-    display: none;
+@media (prefers-reduced-motion: reduce) {
+  .home-animate-in,
+  [style*="home-hero-fade-in"],
+  [style*="home-marquee"] {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

@@ -1,9 +1,5 @@
-import { RegisterForm } from "@vndn/shared/components/auth/RegisterForm";
+import { RegisterPageContent } from "@/components/auth/RegisterPageContent";
 
 export default function RegisterPage() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-vndn-bg px-4">
-      <RegisterForm />
-    </div>
-  );
+  return <RegisterPageContent />;
 }

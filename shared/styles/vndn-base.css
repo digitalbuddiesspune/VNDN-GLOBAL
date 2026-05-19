@@ -1,5 +1,6 @@
 body {
   @apply min-h-screen bg-vndn-bg text-vndn-off-white font-sans antialiased;
+  cursor: default;
 }
 
 ::selection {

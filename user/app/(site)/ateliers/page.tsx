@@ -1,16 +1,12 @@
-import { BrandPageLayout } from "@/components/brand/BrandPageLayout";
+import { BrandSitePage } from "@/components/brand/BrandSitePage";
 import { createBrandMetadata } from "@/lib/brand/metadata";
-import { getBrandBySlug } from "@/lib/brand/ecosystem";
 
 export const metadata = createBrandMetadata("ateliers");
 
 export default function AteliersPage() {
-  const brand = getBrandBySlug("ateliers");
-  if (!brand) return null;
-
   return (
-    <BrandPageLayout
-      brand={brand}
+    <BrandSitePage
+      slug="ateliers"
       relatedSlugs={["vane-victor", "capital", "corporate"]}
     />
   );

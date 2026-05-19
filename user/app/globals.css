@@ -2,3 +2,22 @@
 @source "../../shared";
 
 @import "../../shared/styles/user-site.css";
+
+html,
+body {
+  cursor: default;
+}
+
+a,
+button,
+[role="button"],
+summary,
+label[for],
+select {
+  cursor: pointer;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea {
+  cursor: text;
+}

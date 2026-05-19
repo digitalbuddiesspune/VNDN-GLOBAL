@@ -3,50 +3,48 @@ import { HeroParallax } from "@/components/home/HeroParallax";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-20 pb-16">
       <HeroParallax />
 
-      <div
-        className="relative z-10 w-full max-w-[900px] px-[30px] text-center"
-        style={{ animation: "home-hero-fade-in 1.4s ease forwards" }}
-      >
-        <div
-          className="mb-9 inline-block border border-[rgba(201,168,76,0.4)] px-6 py-2 text-[9px] tracking-[0.35em] text-[#c9a84c] uppercase opacity-0"
-          style={{ animation: "home-hero-fade-in 1.2s ease 0.2s forwards" }}
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-[var(--home-section-x)] text-center">
+        <span
+          className="home-eyebrow mb-6 inline-block rounded-full border border-[var(--home-border)] bg-black/30 px-4 py-2 backdrop-blur-sm"
+          style={{ animation: "home-hero-fade-in 0.8s ease forwards" }}
         >
           Exclusive Luxury Real Estate
-        </div>
+        </span>
         <h1
-          className="font-display mb-7 text-[clamp(52px,8vw,96px)] leading-none font-light tracking-[0.02em] opacity-0"
-          style={{ animation: "home-hero-fade-in 1.2s ease 0.4s forwards" }}
+          className="font-display text-[clamp(2.75rem,7vw,4.75rem)] leading-[1.05] font-light tracking-tight text-[var(--home-cream)]"
+          style={{ animation: "home-hero-fade-in 0.8s ease 0.1s both" }}
         >
-          Where <em className="text-[#c9a84c] not-italic">Prestige</em>
+          Where <em className="text-[var(--home-gold)] not-italic">Prestige</em>
           <br />
           Meets Property
         </h1>
         <p
-          className="mb-10 text-[13px] leading-8 font-light tracking-[0.12em] text-[rgba(248,245,239,0.6)] opacity-0"
-          style={{ animation: "home-hero-fade-in 1.2s ease 0.55s forwards" }}
+          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--home-muted)] md:text-lg"
+          style={{ animation: "home-hero-fade-in 0.8s ease 0.2s both" }}
         >
-          Curated residences across the world&apos;s most coveted addresses
+          Curated residences across Dubai and Ahmedabad — buy, rent, and invest
+          with a single trusted partner.
         </p>
 
         <div
-          className="mx-auto opacity-0"
-          style={{ animation: "home-hero-fade-in 1.2s ease 0.7s forwards" }}
+          className="mt-10"
+          style={{ animation: "home-hero-fade-in 0.8s ease 0.35s both" }}
         >
           <HeroInteractive />
         </div>
       </div>
 
       <div
-        className="absolute bottom-10 left-1/2 z-10 flex flex-col items-center gap-2.5"
-        style={{ animation: "home-bounce 2s infinite" }}
+        className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex"
+        aria-hidden
       >
-        <span className="text-[8px] tracking-[0.3em] text-[#8a8a80] uppercase">
+        <span className="text-[10px] tracking-[0.2em] text-[var(--home-muted)] uppercase">
           Scroll
         </span>
-        <div className="h-[50px] w-px bg-gradient-to-b from-[#c9a84c] to-transparent" />
+        <div className="h-10 w-px bg-gradient-to-b from-[var(--home-gold)] to-transparent" />
       </div>
     </section>
   );

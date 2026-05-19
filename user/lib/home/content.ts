@@ -312,9 +312,9 @@ export const FOOTER_AHMEDABAD_LINKS = [
 ] as const;
 
 export const FOOTER_COMPANY_LINKS = [
-  { label: "About Us", href: "#about" },
-  { label: "Contact", href: "#contact" },
-  { label: "NRI Investment", href: "#nri" },
+  { label: "About Us", href: "/vane-victor" },
+  { label: "Contact", href: "/contact" },
+  { label: "NRI Investment", href: "/nri" },
   { label: "Our Advisors", href: "#" },
   { label: "Privacy Policy", href: "#" },
 ] as const;

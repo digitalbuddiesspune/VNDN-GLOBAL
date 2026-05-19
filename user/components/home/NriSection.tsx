@@ -19,7 +19,7 @@ export function NriSection() {
             across Dubai and Ahmedabad.
           </p>
           <Link
-            href="#inquiry"
+            href="/inquire"
             className="mt-8 inline-block bg-[#c9a84c] px-8 py-4 text-[10px] font-medium tracking-[0.2em] text-[#0f0f0e] uppercase no-underline transition-colors hover:bg-[#e8d49a]"
           >
             Speak to an NRI Advisor

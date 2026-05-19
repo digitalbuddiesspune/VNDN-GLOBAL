@@ -142,7 +142,7 @@ export function VaneVictorAboutPage() {
               Explore Properties
             </Link>
             <Link
-              href="/#inquiry"
+              href="/inquire"
               className="border border-[rgba(201,168,76,0.4)] px-10 py-4 text-[10px] font-medium tracking-[0.25em] text-[#f8f5ef] uppercase no-underline transition-colors hover:border-[#c9a84c]"
             >
               Request Consultation

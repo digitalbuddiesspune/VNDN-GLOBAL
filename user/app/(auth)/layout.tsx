@@ -1,5 +1,5 @@
-import { AuthProvider } from "@vndn/shared/components/auth/AuthProvider";
+import { AuthLayoutProvider } from "@/components/auth/AuthLayoutProvider";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
-  return <AuthProvider>{children}</AuthProvider>;
+  return <AuthLayoutProvider>{children}</AuthLayoutProvider>;
 }

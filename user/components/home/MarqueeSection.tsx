@@ -23,7 +23,7 @@ export function MarqueeSection() {
         {items.map((name, i) => (
           <span
             key={`${name}-${i}`}
-            className="inline-flex shrink-0 cursor-default items-center gap-5 px-10 py-[22px] text-[9px] tracking-[0.35em] text-[#8a8a80] uppercase transition-colors hover:text-[#c9a84c]"
+            className="inline-flex shrink-0 items-center gap-5 px-10 py-5 text-xs tracking-[0.2em] text-[var(--home-muted)] uppercase transition-colors hover:text-[var(--home-gold)]"
           >
             <span className="inline-block h-1 w-1 shrink-0 rounded-full bg-[#c9a84c]" />
             {name}
