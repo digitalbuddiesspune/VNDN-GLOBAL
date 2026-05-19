@@ -60,17 +60,31 @@ export function HomeFooter() {
         </p>
         <div className="flex gap-5">
           {["Instagram", "LinkedIn", "WhatsApp"].map((social) => (
-            <Link
+            <span
               key={social}
-              href="#"
-              className="text-[10px] tracking-[0.2em] text-[#8a8a80] uppercase no-underline transition-colors hover:text-[#c9a84c]"
+              className="text-[10px] tracking-[0.2em] text-[#8a8a80] uppercase"
             >
               {social}
-            </Link>
+            </span>
           ))}
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterLink({ href, label }: { href: string; label: string }) {
+  const className =
+    "text-xs font-light tracking-[0.08em] text-[#8a8a80] no-underline transition-colors hover:text-[#f8f5ef]";
+
+  if (href === "#" || href === "") {
+    return <span className={`${className} cursor-default opacity-70`}>{label}</span>;
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {label}
+    </Link>
   );
 }
 
@@ -89,12 +103,7 @@ function FooterColumn({
       <ul className="list-none space-y-3">
         {links.map((link) => (
           <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-xs font-light tracking-[0.08em] text-[#8a8a80] no-underline transition-colors hover:text-[#f8f5ef]"
-            >
-              {link.label}
-            </Link>
+            <FooterLink href={link.href} label={link.label} />
           </li>
         ))}
       </ul>

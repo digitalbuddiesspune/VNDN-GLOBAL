@@ -17,7 +17,7 @@ export function CityShowcaseSection() {
           </h2>
         </div>
         <Link
-          href="#"
+          href="/projects"
           className="border-b border-[#c9a84c] pb-1 text-[10px] tracking-[0.2em] text-[#c9a84c] uppercase no-underline transition-opacity hover:opacity-60"
         >
           View All Properties

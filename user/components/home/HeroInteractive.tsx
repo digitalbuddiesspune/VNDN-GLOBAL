@@ -108,6 +108,7 @@ export function HeroInteractive() {
           </div>
           <Link
             href={`/${activeCity}?mode=${mode}${query ? `&q=${encodeURIComponent(query)}` : ""}`}
+            prefetch={false}
             className="home-btn-primary shrink-0 sm:px-8"
           >
             Search
@@ -137,6 +138,7 @@ export function HeroInteractive() {
           <Link
             key={city.slug}
             href={`/${city.slug}`}
+            prefetch={false}
             className={cn(
               "group rounded-lg border p-5 text-center transition-all",
               activeCity === city.slug
