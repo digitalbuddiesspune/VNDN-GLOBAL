@@ -7,7 +7,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon",
     "seed:admin": "node src/scripts/seedAdmin.js",
     "seed:users": "node src/scripts/seedUsers.js"
   },
@@ -20,6 +20,6 @@
     "mongoose": "^8.16.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.14"
   }
 }
