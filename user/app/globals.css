@@ -1,7 +1,7 @@
 @import "tailwindcss";
-@source "../../shared";
+@source "../shared";
 
-@import "../../shared/styles/user-site.css";
+@import "../shared/styles/user-site.css";
 
 html,
 body {
